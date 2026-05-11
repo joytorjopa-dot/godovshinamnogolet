@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наша годовщина 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-hearts"></div>
+    <header>
+        <div class="header-content">
+            <h1 class="header-names">Илья & Ксюша</h1>
+            <p class="header-subtitle">Наша история любви!</p>
+            <!-- <div class="heart-divider">💖</div> -->
+            <div class="timer-section">
+                <p class="timer-title">Мы вместе уже:</p>
+                <div class="timer-boxes">
+                    <div class="timer-box">
+                        <span class="timer-number" id="timer-days">0</span>
+                        <span class="timer-label">дней</span>
+                    </div>
+                    <div class="timer-box">
+                        <span class="timer-number" id="timer-hours">00</span>
+                        <span class="timer-label">часов</span>
+                    </div>
+                    <div class="timer-box">
+                        <span class="timer-number" id="timer-minutes">00</span>
+                        <span class="timer-label">минут</span>
+                    </div>
+                    <div class="timer-box">
+                        <span class="timer-number" id="timer-seconds">00</span>
+                        <span class="timer-label">секунд</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <nav>
+        <a href="#" data-page="page-main" class="active">🏠 Главная</a>
+        <a id="history" href="#" data-page="page-story">📖 Наша история</a>
+        <!-- <a id="wishes" href="#" data-page="page-wishes">💌 Пожелания</a> -->
+    </nav>
+    <main>
+        <div class="page active" id="page-main">
+            <section class="moments-section">
+                <h2 class="moments-title fade-in">Наши моменты ✨</h2>
+                <p class="moments-text fade-in">
+                    Благодаря тебе мои глаза сияют ярче любого алмаза. Ты - мой свет и мой путеводитель в жизни. Твой нежный взгляд заставляет чувствовать меня живым, и я благодарен, что повстречал такую прелестную и замечательную девочку. Ты светишь ярче любой звездочки на небе, и я рад, что забрал тебя себе. Я тебя люблю))
+                </p>
+                <div class="love-quote fade-in">
+                   Ты – моя песня, моя мечта, мое дыхание. Я не понимаю, как смог прожить без тебя так долго. Я люблю тебя больше, чем ты можешь себе представить. Я всегда любил и буду любить только тебя.<br><br> @Николас Спаркс</div>
+            </section>
+            <section class="gallery-section">
+                <h2 class="gallery-title fade-in">Наши фото 📸</h2>
+
+                <div class="gallery-grid">
+                    <div class="gallery-card fade-in" onclick="переходНаСтраницу('page-story')">
+                        <img src = "photos/2.jpg" src="#wishes" 
+                             alt="Наше фото">
+                        <div class="card-overlay">
+                            <h3>Наша история</h3>
+                            <p>Нажми, чтобы прочитать →</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card fade-in">
+                        <a href="https://www.youtube.com/shorts/wV6obdRqy1Q"><img src = "photos/4.jpg" src="#wishes"></a>
+                             alt="Наше фото">
+                        <div class="card-overlay">
+                            <h3>Мои пожелания</h3>
+                            <p>Нажми, чтобы прочитать →</p>
+                        </div>
+                    </div>
+                    <!-- <div class="gallery-card fade-in" onclick="переходНаСтраницу('page-story')">
+                        <img src="" 
+                             alt="Наше фото">
+                        <div class="card-overlay">
+                            <h3>Мои пожелания</h3>
+                            <p>Нажми, чтобы прочитать →</p>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+        </div>
+        <div class="page" id="page-story">
+            <section class="moments-section">
+                <h2 class="moments-title fade-in">Наша история 📖</h2>
+                <p class="moments-text fade-in">
+                    Наша маленькая и очень интересная история началась так неожиданно. <br>С простого знакомства в интернете все переросло в реальную жизнь. <br>Я не думал, что я повстречаю такую замечательную девочку в своей жизни. <br>Наша первая прогулка. <br>Ты была очаровательна, твои красивые зеленые глазки так блестели. <br>Тогда мы впервые погуляли за руку. <br>И тогда был наш первый поцелуй под дождем, искренний и теплый. <br>Hаш смех Вместе с этого началась наша скромная, но очень интересная и теплая история)
+                </p>
+
+                <!-- <div class="love-quote fade-in">
+                    Помнишь наше первое свидание? Я так волновался, 
+                    что чуть не забыл как дышать. А ты улыбнулась — 
+                    и я понял, что пропал. 🥰
+                </div> -->
+
+                <p class="moments-text fade-in">
+                    С тех пор каждый день — это новая глава нашей 
+                    самой красивой истории. Истории, которую я хочу 
+                    писать с тобой всю жизнь.
+                </p>
+            </section>
+        </div>
+        <div class="page" id="page-wishes">
+            <section class="moments-section">
+                <h2 class="moments-title fade-in">Мои пожелания 💌</h2>
+                <p class="moments-text fade-in">
+                    В этот особенный день я хочу пожелать нам обоим 
+                    бесконечного счастья, тёплых вечеров и громкого смеха. 
+                </p>
+
+                <div class="love-quote fade-in">
+                    Пусть наша любовь растёт с каждым днём, 
+                    как самый красивый цветок в саду. 
+                    Я люблю тебя больше, чем вчера, 
+                    но меньше, чем завтра. 🌹
+                </div>
+
+                <p class="moments-text fade-in">
+                    С годовщиной нас, любимая! 🥂💕
+                </p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <span class="footer-heart">💕</span>
+        <p class="footer-text">Сделано с любовью для самого важного человека</p>
+        <p class="footer-year">© Наша любовь, 2024 - 2026 forever 💖</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

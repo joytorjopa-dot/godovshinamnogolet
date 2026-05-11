@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Шрифт для всего сайта. Хочешь другой — замени название */
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    /* Цвет фона — очень нежный розовый */
+    background: #fff5f7;
+
+    /* Цвет текста — тёмно-серый, чтобы читалось */
+    color: #4a3040;
+
+    /* Плавная прокрутка при нажатии на ссылки */
+    scroll-behavior: smooth;
+}
+
+
+/* ---------- ХЕДЕР (шапка сайта) ---------- */
+
+header {
+    /* Градиент из нескольких оттенков розового + немного приглушённого красного */
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('photos/1.jpg') no-repeat center center/cover; 
+
+    /* Текст по центру */
+    text-align: center;
+
+    /* Отступы внутри */
+    padding: 60px 20px 40px;
+
+    /* Тень внизу шапки */
+    box-shadow: 0 4px 20px rgba(200, 100, 120, 0.2);
+
+    /* Чтобы сердечки-частицы не вылезали */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Контейнер для текста в хедере (чтобы был поверх частиц) */
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ваши имена — главный заголовок */
+.header-names {
+    /* МЕНЯЙ ИМЕНА В index.html! */
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(180, 60, 80, 0.4);
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Подзаголовок под именами */
+.header-subtitle {
+    font-size: 1.2rem;
+    color: #fff0f3;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* Сердечко-разделитель */
+.heart-divider {
+    font-size: 2rem;
+    color: #fff;
+    margin: 15px 0;
+    animation: heartbeat 1.5s infinite;
+}
+
+/* Анимация биения сердца */
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.25); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.15); }
+    60% { transform: scale(1); }
+}
+
+
+/* ---------- БЛОК ТАЙМЕРА ---------- */
+
+.timer-section {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 8px 30px rgba(200, 100, 120, 0.15);
+    border: 2px solid rgba(244, 166, 176, 0.3);
+}
+
+.timer-title {
+    font-size: 1.1rem;
+    color: #b85670;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Контейнер для ячеек таймера */
+.timer-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Одна ячейка таймера (дни, часы, минуты, секунды) */
+.timer-box {
+    background: linear-gradient(145deg, #fce4ec, #f8bbd0);
+    border-radius: 15px;
+    padding: 15px 10px;
+    min-width: 80px;
+    box-shadow: 0 4px 12px rgba(200, 100, 120, 0.1);
+    transition: transform 0.3s;
+}
+
+.timer-box:hover {
+    transform: translateY(-3px);
+}
+
+/* Цифра в ячейке */
+.timer-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #c94c6e;
+    display: block;
+}
+
+/* Подпись под цифрой */
+.timer-label {
+    font-size: 0.75rem;
+    color: #b85670;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    display: block;
+}
+
+
+/* ---------- НАВИГАЦИЯ (меню страниц) ---------- */
+
+nav {
+    background: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(200, 100, 120, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    /* Каждая ссылка */
+    color: #c94c6e;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+nav a:hover,
+nav a.active {
+    background: #fce4ec;
+    color: #a83858;
+}
+
+
+/* ---------- МЕЙН (основное содержимое) ---------- */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+
+/* --- Секция "Наши моменты" (верхняя часть мейна) --- */
+
+.moments-section {
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 50px;
+}
+
+.moments-title {
+    font-size: 2.2rem;
+    color: #c94c6e;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Декоративная линия под заголовком */
+.moments-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #f4a6b0, #c94c6e, #f4a6b0);
+    border-radius: 2px;
+}
+
+.moments-text {
+    font-size: 1.15rem;
+    color: #6b4555;
+    line-height: 1.9;
+    max-width: 700px;
+    margin: 25px auto 0;
+}
+
+/* Красивая цитата/признание */
+.love-quote {
+    background: linear-gradient(135deg, #fce4ec, #fff5f7);
+    border-left: 4px solid #e8879b;
+    border-radius: 0 15px 15px 0;
+    padding: 25px 30px;
+    margin: 30px auto;
+    max-width: 600px;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #8b4560;
+    position: relative;
+}
+
+.love-quote::before {
+    content: '"';
+    font-size: 4rem;
+    color: #f4a6b0;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    font-family: Georgia, serif;
+}
+
+/* Анимация плавного появления */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* --- Секция "Фотогалерея" (нижняя часть мейна) --- */
+
+.gallery-section {
+    padding: 30px 0;
+}
+
+.gallery-title {
+    font-size: 2rem;
+    color: #c94c6e;
+    text-align: center;
+    margin-bottom: 35px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Сетка для фото (3 штуки в ряд на больших экранах) */
+.gallery-grid {
+    display: grid;
+    /* 
+       СКОЛЬКО ФОТО В РЯД:
+       Хочешь 2 в ряд — замени repeat(3, ...) на repeat(2, ...)
+       Хочешь 4 — на repeat(4, ...)
+    */
+    /* grid-template-columns: repeat(3, 1fr); */
+    gap: 25px;
+    grid-auto-flow: column;
+}
+
+/* Одна карточка с фото */
+.gallery-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(200, 100, 120, 0.15);
+    transition: transform 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+
+    /* Соотношение сторон (прямоугольное фото) */
+    aspect-ratio: 4 / 3;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(200, 100, 120, 0.25);
+}
+
+/* Фото внутри карточки */
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Подпись к фото (появляется при наведении) */
+.gallery-card .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(180, 60, 80, 0.75));
+    color: white;
+    padding: 30px 20px 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s;
+}
+
+.gallery-card:hover .card-overlay {
+    transform: translateY(0);
+}
+
+.card-overlay h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.card-overlay p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+
+/* ---------- ФУТЕР (подвал сайта) ---------- */
+
+footer {
+    background: linear-gradient(135deg, #d4707a, #f4a6b0, #f9d1d1);
+    text-align: center;
+    padding: 40px 20px;
+    color: #fff;
+    margin-top: 60px;
+}
+
+.footer-heart {
+    font-size: 2.5rem;
+    animation: heartbeat 1.5s infinite;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.footer-text {
+    font-size: 1rem;
+    color: #fff0f3;
+    margin-bottom: 5px;
+}
+
+.footer-year {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* ---------- ПЛАВАЮЩИЕ СЕРДЕЧКИ (фон анимация) ---------- */
+
+.floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.floating-heart {
+    position: absolute;
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: floatUp 8s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100vh) rotate(0deg);
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10vh) rotate(360deg);
+    }
+}
+
+
+/* --- Страницы (контент, который показывается/скрывается) --- */
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+
+/* ---------- АДАПТИВНОСТЬ (для телефонов) ---------- */
+
+/* Планшеты */
+@media (max-width: 768px) {
+    .header-names {
+        font-size: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .timer-boxes {
+        gap: 10px;
+    }
+
+    .timer-box {
+        min-width: 65px;
+        padding: 12px 8px;
+    }
+
+    .timer-number {
+        font-size: 1.6rem;
+    }
+
+    nav a {
+        margin: 5px 8px;
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+}
+
+/* Телефоны */
+@media (max-width: 480px) {
+    .header-names {
+        font-size: 1.6rem;
+    }
+
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        display: block;
+       
+    }
+
+    .gallery-card{
+        margin: 1.6rem;
+    }
+    .moments-title {
+        font-size: 1.6rem;
+    }
+
+    .timer-box {
+        min-width: 60px;
+    }
+}
